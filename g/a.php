@@ -31,7 +31,7 @@ while ($data = mysqli_fetch_array($rs)) {
 	<td><?php echo $data['p_date'];?></td>
 	<td><?php echo $data['p_country'];?></td>
 	<td align="right"><?php echo number_format($data['p_amount'],0);?></td>
-	<td><img src="images/<?php echo strtolower($data['p_product_name']); ?>.jpg" width="55"></td>
+	<td><img src="images/<?php echo $data['p_product_name'];?>.jpg" width="55"></td>
 </tr>
 <?php 
 }

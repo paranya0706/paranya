@@ -33,7 +33,7 @@ if(isset($_POST['Submit'])) {
     echo "<script>";
     echo "alert('Username หรือ Password ไม่ถูกต้อง');"
 ;
-	echo "</script>";    }
+	echo "</script>";    }}
 ?>
 </body>
 </html>

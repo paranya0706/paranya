@@ -16,7 +16,7 @@
     <select name="rid">
 <?php
 include_once("connectdb.php");
-$sql = "SELECT * FROM provice";
+$sql = "SELECT * FROM `provinces`";
 $rs = mysqli_query($conn,$sql3);
 while($data = mysqli_fetch_array($rs3)){
 ?>
@@ -38,7 +38,8 @@ if(isset($_POST['Submit'])){
     $sql2 = "INSERT INTO  `provinces` VALUES (NULL, '{$pname}','{ext}','{rname}')";
     mysqli_query($conn,$sql2) or die ("เพิ่มข้อมูลไม่ได้");
 	$pid = mysqli_insert_id($conn);
-	copy($_FILES['pimage']['tmp_name'], "image/".$pid.".");
+	copy($_FILES['pimage']['tmp_name'], "image/".$pid.".".$ext);
+	// move_uploaded_file($_FILE)
 }
 ?>
 
@@ -51,15 +52,16 @@ if(isset($_POST['Submit'])){
     </tr>
 <?php
 include_once("connectdb.php");
-$sql = "SELECT * FROM provice";
+$sql = "SELECT * FROM AS p INNER JOIN `regions` AS r ON p.r_id=r.r_id";
 $rs = mysqli_query($conn,$sql);
 while($data = mysqli_fetch_array($rs)){
 ?>
     <tr>
         <td><?php echo $data['p_id']; ?></td>
         <td><?php echo $data['p_name']; ?></td>
-        <td><img src="images/<?php echo $data['p_id']; ?>.<?php echo $data['p_name']; ?>jpg" width="140"></td>
-        <td width="80" align="center"><a href="delete_regions.php?id=<?php echo $data['p_id']; ?>" onClick="return confirm('ยืนยันการลบ?');"><img src="images/delete.jpg" width="20"></a></td>
+        <td><?php echo $data['r_name']; ?></td>
+        <td><img src="images/<?php echo $data['p_id']; ?>.<?php echo $data['p_ext']; ?>jpg" width="140"></td>
+        <td width="80" align="center"><a href="delete_province.php?id=<?php echo $data['p_id']; ?>" onClick="return confirm('ยืนยันการลบ?');"><img src="images/delete.jpg" width="20"></a></td>
     </tr>
 <?php } ?>
 </table>

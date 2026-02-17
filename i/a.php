@@ -12,6 +12,14 @@
 	ชื่อภาค <input type="text" name="rname" autofocus required>
     <button type="submit" name="Submit">บันทึก</button>
     </form><br><br>
+    
+<?php
+if(isset($_POST['Submit'])){
+	include_once("connectdb.php");
+    $rname = $_POST['rname'];
+    $sql = "INSERT INTO `regions` (`r_id`, `r_name`) VALUES (NULL,'{$rame}')";
+    mysqli_query($conn,$sql2) or die ("เพิ่มข้อมูลไม่ได้");
+}
 
 <?php
 include_once("connectdb.php");

@@ -18,8 +18,8 @@
 <body>
     <h1>งาน j -- 66010914051 ปรัณญา ศรีบุญเพ็ง</h1>
 
-    <button onclick="showImage('images/1.jpg')">แสดงรูปที่ 1</button>
-    <button onclick="showImage('images/2.jpg')">แสดงรูปที่ 2</button>
+    <button onclick="showImage('images/12.jpg')">แสดงรูปที่ 1</button>
+    <button onclick="showImage('images/11.jpg')">แสดงรูปที่ 2</button>
 
     <div class="image-container">
         <img id="display-img" src="images/1.jpg" width="400" alt="รูปภาพจะแสดงที่นี่">

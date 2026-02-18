@@ -6,7 +6,7 @@
 </head>
 <h1>งาน j -- 66010914051 ปรัณญา ศรีบุญเพ็ง</h1>
 
-<img src="1.jpg"width=400>
+<img src="images/1.jpg"width=400>
 
 <body>
 </body>

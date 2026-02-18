@@ -18,13 +18,17 @@
 <body>
     <h1>งาน j -- 66010914051 ปรัณญา ศรีบุญเพ็ง</h1>
 
-    <button onclick="showImage('images/12.jpg')">แสดงรูปที่ 1</button>
-    <button onclick="showImage('images/11.jpg')">แสดงรูปที่ 2</button>
+    <body>
+    <h1>งาน k -- 66010914055 ภัทรวดี ขามประโคน (การ์ตูน)</h1>
 
-    <div class="image-container">
-        <img id="display-img" src="images/1.jpg" width="400" alt="รูปภาพจะแสดงที่นี่">
-    </div>
+    <button type="button" class="btn-student" onclick="window.location.href='images/12.jpg'">
+        รูป1
+    </button>
 
-    
+    <button type="button" class="btn-teacher" onclick="window.location.href='images/11.jpg'">
+        รูป2
+    </button>
+
+
 </body>
 </html>

@@ -45,17 +45,17 @@
 <h1>งาน k -- 66010914051 ปรัณญา ศรีบุญเพ็ง</h1>
 
 <!-- ปุ่ม -->
-<input type="radio" name="images" id="img1">
+<input type="radio" name="photo" id="img1">
 <label for="img1" class="button">รูปที่ 1</label>
 
-<input type="radio" name="images" id="img2">
+<input type="radio" name="photo" id="img2">
 <label for="img2" class="button">รูปที่ 2</label>
 
 <br>
 
 <!-- รูปภาพ -->
-<img src="12.jpg" class="photo1">
-<img src="11.jpg" class="photo2">
+<img src="12.jpg" class="images">
+<img src="11.jpg" class="images">
 
 </body>
 </html>

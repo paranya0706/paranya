@@ -1,61 +1,34 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>ปรัณญา ศรีบุญเพ็ง (หมวย)</title>
-
-<style>
-    input[type="radio"] {
-        display: none;
-    }
-
-    .btn {
-        padding: 8px 15px;
-        border: 1px solid #0d6efd;
-        background-color: white;
-        color: #0d6efd;
-        cursor: pointer;
-        margin-right: 5px;
-    }
-
-    .btn:hover {
-        background-color: #0d6efd;
-        color: white;
-    }
-
-    img {
-        display: none;
-        margin-top: 20px;
-        width: 300px;
-    }
-
-    #img1:checked ~ .photo1 {
-        display: block;
-    }
-
-    #img2:checked ~ .photo2 {
-        display: block;
-    }
-</style>
-
+    <meta charset="utf-8">
+    <title>ปรัณญา ศรีบุญเพ็ง (หมวย)</title>
+    <style>
+        .image-container {
+            margin-top: 20px;
+        }
+        img {
+            display: block;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>งาน j -- 66010914051 ปรัณญา ศรีบุญเพ็ง</h1>
 
-<h1>งาน k -- 66010914051 ปรัณญา ศรีบุญเพ็ง</h1>
+    <button onclick="showImage('images/1.jpg')">แสดงรูปที่ 1</button>
+    <button onclick="showImage('images/2.jpg')">แสดงรูปที่ 2</button>
 
+    <div class="image-container">
+        <img id="display-img" src="images/1.jpg" width="400" alt="รูปภาพจะแสดงที่นี่">
+    </div>
 
-<input type="radio" name="photo" id="img1">
-<label for="img1" class="btn">รูปที่ 1</label>
-
-<input type="radio" name="photo" id="img2">
-<label for="img2" class="btn">รูปที่ 2</label>
-
-<br>
-
-
-<img src="12.jpg" class="images">
-<img src="11.jpg" class="images">
-
+    <script>
+        function showImage(imagePath) {
+            document.getElementById('display-img').src = imagePath;
+        }
+    </script>
 </body>
 </html>

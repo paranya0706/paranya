@@ -25,10 +25,6 @@
         <img id="display-img" src="images/1.jpg" width="400" alt="รูปภาพจะแสดงที่นี่">
     </div>
 
-    <script>
-        function showImage(imagePath) {
-            document.getElementById('display-img').src = imagePath;
-        }
-    </script>
+    
 </body>
 </html>

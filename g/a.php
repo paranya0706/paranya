@@ -9,8 +9,8 @@
 <h1>ปรัณญา ศรีบุญเพ็ง (หมวย)</h1>
 
 <table border="1">
-<tr>
-	<th>Order ID</th>
+<tr> 
+	<th>Order ID</th> 
     <th>ชื่อสินค้า</th>
     <th>ประเภทสินค้า</th> 
 	<th>วันที่</th> 
@@ -25,7 +25,7 @@ $rs = mysqli_query($conn,$sql);
 while ($data = mysqli_fetch_array($rs)) {
 ?>
 <tr>
-	<td><?php echo $data['p_order_id'];?></td>
+	<td><?php echo $data['p_order_id'];?></td> 
     <td><?php echo $data['p_product_name'];?></td>
 	<td><?php echo $data['p_category'];?></td>
 	<td><?php echo $data['p_date'];?></td>

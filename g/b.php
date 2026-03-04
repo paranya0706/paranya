@@ -26,9 +26,9 @@
 </tr>
 <?php
 include_once("connectdb.php");
-@$kw = $_POST['a'];
-$sql = "SELECT * FROM `popsupermarket` WHERE p_country LIKE '%{$kw}%' OR `p_product_name` LIKE '%{$kw}%' OR `p_category` LIKE '%{$kw}%' ";
-$rs = mysqli_query($conn,$sql);
+@$kw = $_POST['a']; // รับค่าคำค้น (keyword)
+$sql = "SELECT * FROM `popsupermarket` WHERE p_country LIKE '%{$kw}%' OR `p_product_name` LIKE '%{$kw}%' OR `p_category` LIKE '%{$kw}%' "; // คำสั่ง SQL สำหรับค้นหา
+$rs = mysqli_query($conn,$sql); // ดึงข้อมูล + รวมยอดเงิน
 $total = 0 ;
 while ($data = mysqli_fetch_array($rs)) {
 	$total += $data['p_amount']
@@ -41,7 +41,7 @@ while ($data = mysqli_fetch_array($rs)) {
 	<td><?php echo $data['p_country'];?></td>
 	<td align="right"><?php echo number_format($data['p_amount'],0);?></td>
 	<td><img src="images/<?php echo $data['p_product_name'];?>.jpg" width="55"></td>
-</tr>
+</tr> 
 <?php 
 }
 ?> 
@@ -58,7 +58,7 @@ while ($data = mysqli_fetch_array($rs)) {
 </tr>
 
 <?php 
-mysqli_close($conn);
+mysqli_close($conn); // ปิดการเชื่อมต่อฐานข้อมูล 
 ?> 
 
 </body>

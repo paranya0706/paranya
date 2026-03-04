@@ -17,13 +17,14 @@
 	<th>ประเทศ</th> 
     <th>จำนวนเงิน</th> 
     <th>รูปภาพ</th> 
-</tr>
+</tr> 
 <?php
 include_once("connectdb.php");
-$sql = "SELECT * FROM `popsupermarket`" ;
+$sql = "SELECT * FROM `popsupermarket`" ; // คำสั่ง SQL ดึงข้อมูล
 $rs = mysqli_query($conn,$sql);
-while ($data = mysqli_fetch_array($rs)) {
+while ($data = mysqli_fetch_array($rs)) { // วนลูปแสดงข้อมูลทีละแถว
 ?>
+
 <tr>
 	<td><?php echo $data['p_order_id'];?></td> 
     <td><?php echo $data['p_product_name'];?></td>

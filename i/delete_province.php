@@ -5,7 +5,7 @@ include_once("connectdb.php");
 $id = $_GET["id"];
 $id = $_GET["ext"];
 
-$sql = "DELETE FROM province WHEHE p_id='{id}'";
+$sql = "DELETE FROM province WHERE p_id='{id}'";
 mysqli_query($conn.$sql) or die ("ลบข้อมูลไม่ได้");
 
 unlink("images/".$id.".".$ext);
